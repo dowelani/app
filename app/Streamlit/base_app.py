@@ -237,8 +237,8 @@ def main():
 		if "load_data" in st.session_state or load_button:
 			try:
 				# Load the data
-				st.session_state.test = pd.read_csv('Data\processed\test.csv')
-				st.session_state.train = pd.read_csv('Data\processed\train.csv')
+				st.session_state.test = pd.read_csv('app/Data/processed/test.csv')
+				st.session_state.train = pd.read_csv('app/Data/processed/test.csv')
 
 				# Display the DataFrames
 				st.subheader("Preview of the DataFrames")
