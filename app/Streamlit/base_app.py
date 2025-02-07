@@ -62,7 +62,8 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
 import nltk
-download_dir = os.path.join(os.getcwd(), 'data', 'nltk_data')
+# Set the download directory to 'app/Data'
+download_dir = os.path.join(os.getcwd(), 'app', 'Data', 'nltk_data')
 
 # Create the directory if it doesn't exist
 os.makedirs(download_dir, exist_ok=True)
