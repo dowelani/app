@@ -62,20 +62,10 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
 import nltk
-# Set the download directory to 'app/Data'
-download_dir = os.path.join(os.getcwd(), 'app', 'Data', 'nltk_data')
-
-# Create the directory if it doesn't exist
-os.makedirs(download_dir, exist_ok=True)
-
-# Add this directory to the NLTK data path
-nltk.data.path.append(download_dir)
-
-# Download necessary resources
-nltk.download('punkt', download_dir=download_dir)
-nltk.download('stopwords', download_dir=download_dir)
-nltk.download('wordnet', download_dir=download_dir)
-nltk.download('omw-1.4', download_dir=download_dir)
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 
 # Plotting Function
 # Visualize Confusion Matrix
