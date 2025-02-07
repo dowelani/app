@@ -300,6 +300,11 @@ def main():
 	# --- Data Cleaning ---
 	if section == "Data Cleaning":
 		st.header("5. Data Cleaning")
+		import nltk
+		nltk.download('punkt')
+		nltk.download('stopwords')
+		nltk.download('wordnet')
+		nltk.download('omw-1.4')
 		
 		# --- Missing Values Check ---
 		st.subheader("Check for Missing Values")
@@ -472,6 +477,12 @@ At the end of this process, the `trainX` and `testX` variables contain the clean
 
 		if run_preprocessing_button:
 			try:
+				import nltk
+				nltk.download('punkt')
+				nltk.download('stopwords')
+				nltk.download('wordnet')
+				nltk.download('omw-1.4')
+				
 				# Combine 'headlines', 'description', 'content', and 'url' into one column 'text'
 				st.session_state.train['text'] = st.session_state.train[['headlines', 'description', 'content', 'url']].agg(' '.join, axis=1)
 				st.session_state.test['text'] = st.session_state.test[['headlines', 'description', 'content', 'url']].agg(' '.join, axis=1)
