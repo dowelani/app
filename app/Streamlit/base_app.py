@@ -2156,11 +2156,11 @@ st.pyplot(plt)
 		if st.button("Classify"):
 			# Update model paths in session state
 			st.session_state.test['model_paths'] = {
-				"SVM": 'Streamlit/Best_Support_Vector_Machine.pkl',
-				"Naive Bayes": 'Streamlit/Best_Naive_Bayes_Model.pkl',
-				"Logistic Regression": 'Streamlit/Best_Logistic_Regression.pkl',
+				"SVM": 'app/Streamlit/Best_Support_Vector_Machine.pkl',
+				"Naive Bayes": 'app/Streamlit/Best_Naive_Bayes_Model.pkl',
+				"Logistic Regression": 'app/Streamlit/Best_Logistic_Regression.pkl',
 			}
-			st.session_state.test['vectorizer_path'] = 'Streamlit/tfidfvect.pkl'
+			st.session_state.test['vectorizer_path'] = 'app/Streamlit//tfidfvect.pkl'
 
 			# Check if vectorizer and selected model exist
 			if os.path.exists(st.session_state.test['vectorizer_path']) and os.path.exists(st.session_state.test['model_paths'][model_choice]):
