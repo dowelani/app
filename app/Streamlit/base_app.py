@@ -30,6 +30,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import joblib,os
 import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 import pickle
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
@@ -61,11 +65,7 @@ from sklearn.utils.class_weight import compute_sample_weight
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
-import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('omw-1.4')
+
 
 # Plotting Function
 # Visualize Confusion Matrix
